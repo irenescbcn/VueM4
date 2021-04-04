@@ -1,0 +1,63 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.container{
+    border: 3px solid black;
+    width: 550px;
+    height: 550px;
+    margin: auto; 
+    overflow: hidden;
+    position: relative;
+
+}
+
+/* HORIZONTAL ANIMATION */
+.horizontalAnimation{
+    position: absolute;
+    animation-name: horizontal;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    width: 500px;
+    height: 500px;
+}
+
+@keyframes horizontal{
+    0%{transform: translateX(-15px);}
+    100%{transform: translateX(500px);}
+
+}
+
+
+/* VERTICAL ANIMATION */
+.verticalAnimation{
+    position: absolute;
+    animation-name: vertical;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    width: 500px;
+    height: 500px;
+}
+
+@keyframes vertical{
+    0%, 60%{
+        transform: translateY(0px);
+    }
+
+    30%, 100%{
+        transform: translateY(500px);
+    } 
+}  
+
+
+
+
+
+
+
+

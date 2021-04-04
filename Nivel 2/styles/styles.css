@@ -1,0 +1,75 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.container{
+    border: 3px solid black;
+    width: 500px;
+    height: 500px;
+    margin: auto; 
+    overflow: hidden;
+    position: relative;
+
+}
+
+/* HORIZONTAL ANIMATION  */
+.horizontalAnimation{
+    position: absolute;
+    animation-name: horizontal;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    width: 500px;
+    height: 500px;
+}
+
+@keyframes horizontal{
+    0%{transform: translateX(-15px);}
+    100%{transform: translateX(415px);}
+}
+
+
+/* VERTICAL ANIMATION */
+.verticalAnimation{
+    position: absolute;
+    animation-name: vertical;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    width: 500px;
+    height: 500px;
+}
+
+@keyframes vertical{
+    0%, 40%, 80%{
+        transform: translateY(0px); animation-timing-function: ease-in;
+    }
+    20%, 60%, 100%{
+        transform: translateY(425px); animation-timing-function: ease-out;
+    }
+} 
+
+
+/* BALL ANIMATION */
+.ball{
+    position: absolute;
+    animation-name: basketball;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;  
+    animation-direction: alternate;
+}
+
+@keyframes basketball{
+    0%,  19%, 30%,  59%, 65%, 98%{transform: scale(1.0);}
+    20%, 61%, 99%{transform: scale(1.2, 0.8);}
+    21%, 62%, 100%{transform: scale(0.8, 1.2);}  
+}
+
+
+
+
+
+
